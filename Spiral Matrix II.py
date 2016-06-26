@@ -24,13 +24,13 @@ class Solution(object):
         
         while(True):
             if direction==0:
-                for i in range(left,right):
+                for i in range(left,right+1):
                     tmp[up][i]=k
                     k+=1
                 up+=1
             if direction==1:
-                for i in range(up,down):
-                    tmp[right][i]=k
+                for i in range(up,down+1):
+                    tmp[i][right]=k
                     k+=1
                 right-=1
             if direction==2:
@@ -40,7 +40,7 @@ class Solution(object):
                 down-=1
             if direction==3:
                 for i in range(down,up-1,-1):
-                    tmp[left][i]=k
+                    tmp[i][left]=k
                     k+=1
                 left+=1
                 
